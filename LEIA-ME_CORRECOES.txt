@@ -1,0 +1,37 @@
+FAROL IVC — correções desta versão
+
+1. Mapa branco
+- Corrigido o endpoint do react-map-gl para o adaptador MapLibre: react-map-gl/maplibre.
+- Garantido que o mapa e seu container ocupem 100% da viewport.
+- Adicionado tratamento de erro visível para falhas de mapa-base.
+
+2. Interface
+- Modo claro/escuro com ícone Sol/Lua e persistência via localStorage.
+- Painéis translúcidos com efeito de vidro (glassmorphism).
+- Sidebar recolhível e grupos de camadas expansíveis.
+- Legendas configuradas explicitamente.
+
+3. Simbologia
+- Tipologia: Praia Arenosa (amarelo), Costão Rochoso (roxo), Mangue (verde), Tecnógeno (vermelho).
+- Ondas: cinco classes usando I_Ond_norm, compatíveis com os intervalos exibidos no projeto.
+- Erosão/LRR: classes < -3; -3 a -1; -1 a -0,5; -0,5 a +0,5; > +0,5.
+
+4. Busca municipal
+- Criado public/data/municipios_index.json com os 92 municípios e bounding boxes.
+- A busca agora oferece sugestões e aproxima o mapa ao município selecionado.
+
+5. Atenção — Municípios da Zona Costeira
+- O campo antigo 'mun' continha 17 municípios.
+- Comparando a geometria dos 92 municípios com o GeoJSON dissolvido web_municipios_zona_costeira.geojson, foram identificados 35 municípios que compõem praticamente toda a área dissolvida.
+- Foi criado o campo 'mun_zc' SOMENTE na cópia web deste pacote, com 35 municípios (1) e 57 demais (0).
+- O arquivo-fonte original fora deste pacote não foi alterado.
+- Recomenda-se confirmar o total 35 com a definição oficial/metodológica adotada pelo projeto antes da publicação definitiva.
+
+6. MDE
+- Continua como slot 'Em preparação para web'. Nenhuma conversão do raster foi executada.
+
+7. Camadas não apareciam
+- Corrigido o envio de filter={undefined} ao MapLibre; a propriedade filter agora só é criada quando existe um array de filtro válido.
+- Isso elimina o erro 'array expected, undefined found' que impedia a criação das camadas sem filtro.
+- Camadas de preenchimento agora são desenhadas antes das linhas, mantendo Tipologia e Ondas visíveis por cima.
+- Apenas camadas com popup entram em interactiveLayerIds.

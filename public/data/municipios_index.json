@@ -1,0 +1,1106 @@
+[
+  {
+    "name": "Angra dos Reis",
+    "code": "330010",
+    "reggov": "Região da Costa Verde",
+    "mun_zc": 1,
+    "bbox": [
+      -44.6404556,
+      -23.2281275,
+      -44.0907797,
+      -22.8351382
+    ]
+  },
+  {
+    "name": "Aperibé",
+    "code": "330015",
+    "reggov": "Região Noroeste Fluminense",
+    "mun_zc": 0,
+    "bbox": [
+      -42.2048615,
+      -21.7050475,
+      -42.0568487,
+      -21.6012538
+    ]
+  },
+  {
+    "name": "Araruama",
+    "code": "330020",
+    "reggov": "Região das Baixadas Litorâneas",
+    "mun_zc": 1,
+    "bbox": [
+      -42.4468128,
+      -22.9394734,
+      -42.1318952,
+      -22.5507431
+    ]
+  },
+  {
+    "name": "Areal",
+    "code": "330022",
+    "reggov": "Região Centro-Sul Fluminense",
+    "mun_zc": 0,
+    "bbox": [
+      -43.1828019,
+      -22.3105259,
+      -43.0339865,
+      -22.1628282
+    ]
+  },
+  {
+    "name": "Armação dos Búzios",
+    "code": "330023",
+    "reggov": "Região das Baixadas Litorâneas",
+    "mun_zc": 1,
+    "bbox": [
+      -42.010597,
+      -22.8228344,
+      -41.7842166,
+      -22.7126745
+    ]
+  },
+  {
+    "name": "Arraial do Cabo",
+    "code": "330025",
+    "reggov": "Região das Baixadas Litorâneas",
+    "mun_zc": 1,
+    "bbox": [
+      -42.2829821,
+      -23.0159575,
+      -41.9738922,
+      -22.8635318
+    ]
+  },
+  {
+    "name": "Barra Mansa",
+    "code": "330040",
+    "reggov": "Região do Médio Paraíba",
+    "mun_zc": 0,
+    "bbox": [
+      -44.3471914,
+      -22.6719827,
+      -44.0028041,
+      -22.2970533
+    ]
+  },
+  {
+    "name": "Barra do Piraí",
+    "code": "330030",
+    "reggov": "Região do Médio Paraíba",
+    "mun_zc": 0,
+    "bbox": [
+      -44.0852495,
+      -22.5543371,
+      -43.7487488,
+      -22.2941331
+    ]
+  },
+  {
+    "name": "Belford Roxo",
+    "code": "330045",
+    "reggov": "Região Metropolitana",
+    "mun_zc": 1,
+    "bbox": [
+      -43.4340697,
+      -22.7776314,
+      -43.3198503,
+      -22.6849266
+    ]
+  },
+  {
+    "name": "Bom Jardim",
+    "code": "330050",
+    "reggov": "Região Serrana",
+    "mun_zc": 0,
+    "bbox": [
+      -42.5221143,
+      -22.3042424,
+      -42.2334613,
+      -22.1078797
+    ]
+  },
+  {
+    "name": "Bom Jesus do Itabapoana",
+    "code": "330060",
+    "reggov": "Região Noroeste Fluminense",
+    "mun_zc": 0,
+    "bbox": [
+      -41.8505964,
+      -21.3173829,
+      -41.4696285,
+      -20.8635764
+    ]
+  },
+  {
+    "name": "Cabo Frio",
+    "code": "330070",
+    "reggov": "Região das Baixadas Litorâneas",
+    "mun_zc": 1,
+    "bbox": [
+      -42.1824579,
+      -22.9331309,
+      -41.8890341,
+      -22.5401258
+    ]
+  },
+  {
+    "name": "Cachoeiras de Macacu",
+    "code": "330080",
+    "reggov": "Região Metropolitana",
+    "mun_zc": 0,
+    "bbox": [
+      -42.9229916,
+      -22.6865326,
+      -42.550467,
+      -22.3552637
+    ]
+  },
+  {
+    "name": "Cambuci",
+    "code": "330090",
+    "reggov": "Região Noroeste Fluminense",
+    "mun_zc": 0,
+    "bbox": [
+      -42.1198322,
+      -21.6400383,
+      -41.7099612,
+      -21.3274358
+    ]
+  },
+  {
+    "name": "Campos dos Goytacazes",
+    "code": "330100",
+    "reggov": "Região Norte Fluminense",
+    "mun_zc": 1,
+    "bbox": [
+      -41.8884729,
+      -22.1043158,
+      -40.974575,
+      -21.1955012
+    ]
+  },
+  {
+    "name": "Cantagalo",
+    "code": "330110",
+    "reggov": "Região Serrana",
+    "mun_zc": 0,
+    "bbox": [
+      -42.509021,
+      -22.0376005,
+      -42.1670258,
+      -21.6972095
+    ]
+  },
+  {
+    "name": "Carapebus",
+    "code": "330093",
+    "reggov": "Região Norte Fluminense",
+    "mun_zc": 1,
+    "bbox": [
+      -41.7711185,
+      -22.2997208,
+      -41.53847,
+      -22.1082858
+    ]
+  },
+  {
+    "name": "Cardoso Moreira",
+    "code": "330115",
+    "reggov": "Região Norte Fluminense",
+    "mun_zc": 0,
+    "bbox": [
+      -41.657021,
+      -21.6748948,
+      -41.3601047,
+      -21.397858
+    ]
+  },
+  {
+    "name": "Carmo",
+    "code": "330120",
+    "reggov": "Região Serrana",
+    "mun_zc": 0,
+    "bbox": [
+      -42.6992478,
+      -21.9996332,
+      -42.4301934,
+      -21.784112
+    ]
+  },
+  {
+    "name": "Casimiro de Abreu",
+    "code": "330130",
+    "reggov": "Região das Baixadas Litorâneas",
+    "mun_zc": 1,
+    "bbox": [
+      -42.3041617,
+      -22.5993652,
+      -41.9791451,
+      -22.3518951
+    ]
+  },
+  {
+    "name": "Comendador Levy Gasparian",
+    "code": "330095",
+    "reggov": "Região Centro-Sul Fluminense",
+    "mun_zc": 0,
+    "bbox": [
+      -43.3466988,
+      -22.103328,
+      -43.128342,
+      -22.0029075
+    ]
+  },
+  {
+    "name": "Conceição de Macabu",
+    "code": "330140",
+    "reggov": "Região Norte Fluminense",
+    "mun_zc": 0,
+    "bbox": [
+      -41.9747421,
+      -22.2748849,
+      -41.6596893,
+      -22.0489374
+    ]
+  },
+  {
+    "name": "Cordeiro",
+    "code": "330150",
+    "reggov": "Região Serrana",
+    "mun_zc": 0,
+    "bbox": [
+      -42.4146718,
+      -22.1253766,
+      -42.2626549,
+      -21.9968027
+    ]
+  },
+  {
+    "name": "Duas Barras",
+    "code": "330160",
+    "reggov": "Região Serrana",
+    "mun_zc": 0,
+    "bbox": [
+      -42.6178021,
+      -22.1636477,
+      -42.3456191,
+      -21.9063663
+    ]
+  },
+  {
+    "name": "Duque de Caxias",
+    "code": "330170",
+    "reggov": "Região Metropolitana",
+    "mun_zc": 1,
+    "bbox": [
+      -43.4167273,
+      -22.8104928,
+      -43.1941838,
+      -22.4755036
+    ]
+  },
+  {
+    "name": "Engenheiro Paulo de Frontin",
+    "code": "330180",
+    "reggov": "Região Centro-Sul Fluminense",
+    "mun_zc": 0,
+    "bbox": [
+      -43.7123492,
+      -22.5867509,
+      -43.5618026,
+      -22.4568236
+    ]
+  },
+  {
+    "name": "Guapimirim",
+    "code": "330185",
+    "reggov": "Região Metropolitana",
+    "mun_zc": 1,
+    "bbox": [
+      -43.0630315,
+      -22.7316487,
+      -42.865466,
+      -22.4479991
+    ]
+  },
+  {
+    "name": "Iguaba Grande",
+    "code": "330187",
+    "reggov": "Região das Baixadas Litorâneas",
+    "mun_zc": 1,
+    "bbox": [
+      -42.2538856,
+      -22.8777324,
+      -42.176658,
+      -22.7802187
+    ]
+  },
+  {
+    "name": "Itaboraí",
+    "code": "330190",
+    "reggov": "Região Metropolitana",
+    "mun_zc": 1,
+    "bbox": [
+      -43.0297566,
+      -22.8771026,
+      -42.7330895,
+      -22.6345187
+    ]
+  },
+  {
+    "name": "Itaguaí",
+    "code": "330200",
+    "reggov": "Região Metropolitana",
+    "mun_zc": 1,
+    "bbox": [
+      -43.9395621,
+      -23.0639409,
+      -43.6666389,
+      -22.692357
+    ]
+  },
+  {
+    "name": "Italva",
+    "code": "330205",
+    "reggov": "Região Noroeste Fluminense",
+    "mun_zc": 0,
+    "bbox": [
+      -41.7811835,
+      -21.5957165,
+      -41.5517678,
+      -21.3173829
+    ]
+  },
+  {
+    "name": "Itaocara",
+    "code": "330210",
+    "reggov": "Região Noroeste Fluminense",
+    "mun_zc": 0,
+    "bbox": [
+      -42.2370801,
+      -21.8610443,
+      -41.9367381,
+      -21.5967529
+    ]
+  },
+  {
+    "name": "Itaperuna",
+    "code": "330220",
+    "reggov": "Região Noroeste Fluminense",
+    "mun_zc": 0,
+    "bbox": [
+      -42.1958804,
+      -21.4015781,
+      -41.5850715,
+      -21.0300055
+    ]
+  },
+  {
+    "name": "Itatiaia",
+    "code": "330225",
+    "reggov": "Região do Médio Paraíba",
+    "mun_zc": 0,
+    "bbox": [
+      -44.6628858,
+      -22.5660468,
+      -44.4785105,
+      -22.3202872
+    ]
+  },
+  {
+    "name": "Japeri",
+    "code": "330227",
+    "reggov": "Região Metropolitana",
+    "mun_zc": 1,
+    "bbox": [
+      -43.6707825,
+      -22.7225753,
+      -43.534019,
+      -22.6093625
+    ]
+  },
+  {
+    "name": "Laje do Murié",
+    "code": "330230",
+    "reggov": "Região Noroeste Fluminense",
+    "mun_zc": 0,
+    "bbox": [
+      -42.2370678,
+      -21.3441617,
+      -42.0290882,
+      -21.1580265
+    ]
+  },
+  {
+    "name": "Macaé",
+    "code": "330240",
+    "reggov": "Região Norte Fluminense",
+    "mun_zc": 1,
+    "bbox": [
+      -42.2641728,
+      -22.4392514,
+      -41.6853572,
+      -22.1262876
+    ]
+  },
+  {
+    "name": "Macuco",
+    "code": "330245",
+    "reggov": "Região Serrana",
+    "mun_zc": 0,
+    "bbox": [
+      -42.3179835,
+      -22.0923129,
+      -42.219472,
+      -21.9727893
+    ]
+  },
+  {
+    "name": "Magé",
+    "code": "330250",
+    "reggov": "Região Metropolitana",
+    "mun_zc": 1,
+    "bbox": [
+      -43.2250583,
+      -22.7281524,
+      -43.0096465,
+      -22.4840381
+    ]
+  },
+  {
+    "name": "Mangaratiba",
+    "code": "330260",
+    "reggov": "Região da Costa Verde",
+    "mun_zc": 1,
+    "bbox": [
+      -44.1931077,
+      -23.1024091,
+      -43.7929825,
+      -22.8423512
+    ]
+  },
+  {
+    "name": "Maricá",
+    "code": "330270",
+    "reggov": "Região Metropolitana",
+    "mun_zc": 1,
+    "bbox": [
+      -43.0245802,
+      -23.0252351,
+      -42.6341909,
+      -22.8407762
+    ]
+  },
+  {
+    "name": "Mendes",
+    "code": "330280",
+    "reggov": "Região Centro-Sul Fluminense",
+    "mun_zc": 0,
+    "bbox": [
+      -43.7976227,
+      -22.6062213,
+      -43.6884348,
+      -22.455024
+    ]
+  },
+  {
+    "name": "Mesquita",
+    "code": "330285",
+    "reggov": "Região Metropolitana",
+    "mun_zc": 1,
+    "bbox": [
+      -43.5023921,
+      -22.8405058,
+      -43.3971054,
+      -22.7643356
+    ]
+  },
+  {
+    "name": "Miguel Pereira",
+    "code": "330290",
+    "reggov": "Região Centro-Sul Fluminense",
+    "mun_zc": 0,
+    "bbox": [
+      -43.6605762,
+      -22.6422221,
+      -43.2884693,
+      -22.4195384
+    ]
+  },
+  {
+    "name": "Miracema",
+    "code": "330300",
+    "reggov": "Região Noroeste Fluminense",
+    "mun_zc": 0,
+    "bbox": [
+      -42.2784526,
+      -21.4739748,
+      -42.0283195,
+      -21.3059687
+    ]
+  },
+  {
+    "name": "Natividade",
+    "code": "330310",
+    "reggov": "Região Noroeste Fluminense",
+    "mun_zc": 0,
+    "bbox": [
+      -42.0851797,
+      -21.1562473,
+      -41.8009713,
+      -20.9289057
+    ]
+  },
+  {
+    "name": "Nilópolis",
+    "code": "330320",
+    "reggov": "Região Metropolitana",
+    "mun_zc": 1,
+    "bbox": [
+      -43.4693355,
+      -22.8490418,
+      -43.3903916,
+      -22.7916445
+    ]
+  },
+  {
+    "name": "Niterói",
+    "code": "330330",
+    "reggov": "Região Metropolitana",
+    "mun_zc": 1,
+    "bbox": [
+      -43.1390866,
+      -22.9897583,
+      -42.9528455,
+      -22.853767
+    ]
+  },
+  {
+    "name": "Nova Friburgo",
+    "code": "330340",
+    "reggov": "Região Serrana",
+    "mun_zc": 0,
+    "bbox": [
+      -42.7276812,
+      -22.4578343,
+      -42.2053253,
+      -22.1544952
+    ]
+  },
+  {
+    "name": "Nova Iguaçu",
+    "code": "330350",
+    "reggov": "Região Metropolitana",
+    "mun_zc": 1,
+    "bbox": [
+      -43.6737663,
+      -22.8652766,
+      -43.3643972,
+      -22.5260114
+    ]
+  },
+  {
+    "name": "Paracambi",
+    "code": "330360",
+    "reggov": "Região Metropolitana",
+    "mun_zc": 0,
+    "bbox": [
+      -43.8408516,
+      -22.7010222,
+      -43.5974467,
+      -22.538841
+    ]
+  },
+  {
+    "name": "Parati",
+    "code": "330380",
+    "reggov": "Região da Costa Verde",
+    "mun_zc": 1,
+    "bbox": [
+      -44.8880289,
+      -23.3699674,
+      -44.5026583,
+      -22.9141118
+    ]
+  },
+  {
+    "name": "Paraíba do Sul",
+    "code": "330370",
+    "reggov": "Região Centro-Sul Fluminense",
+    "mun_zc": 0,
+    "bbox": [
+      -43.4369836,
+      -22.3707354,
+      -43.1589776,
+      -22.0021754
+    ]
+  },
+  {
+    "name": "Paty do Alferes",
+    "code": "330385",
+    "reggov": "Região Centro-Sul Fluminense",
+    "mun_zc": 0,
+    "bbox": [
+      -43.5079089,
+      -22.4762274,
+      -43.2884305,
+      -22.2787201
+    ]
+  },
+  {
+    "name": "Petrópolis",
+    "code": "330390",
+    "reggov": "Região Metropolitana",
+    "mun_zc": 0,
+    "bbox": [
+      -43.3773012,
+      -22.5725851,
+      -42.9779174,
+      -22.2025201
+    ]
+  },
+  {
+    "name": "Pinheiral",
+    "code": "330395",
+    "reggov": "Região do Médio Paraiba",
+    "mun_zc": 0,
+    "bbox": [
+      -44.0685238,
+      -22.5924196,
+      -43.9134823,
+      -22.4840942
+    ]
+  },
+  {
+    "name": "Piraí",
+    "code": "330400",
+    "reggov": "Região do Médio Paraiba",
+    "mun_zc": 0,
+    "bbox": [
+      -44.0863015,
+      -22.8091538,
+      -43.7710362,
+      -22.5009925
+    ]
+  },
+  {
+    "name": "Porciúncula",
+    "code": "330410",
+    "reggov": "Região Noroeste Fluminense",
+    "mun_zc": 0,
+    "bbox": [
+      -42.1508727,
+      -21.0287793,
+      -41.775169,
+      -20.7631698
+    ]
+  },
+  {
+    "name": "Porto Real",
+    "code": "330411",
+    "reggov": "Região do Médio Paraíba",
+    "mun_zc": 0,
+    "bbox": [
+      -44.3733614,
+      -22.4940114,
+      -44.2739626,
+      -22.3975482
+    ]
+  },
+  {
+    "name": "Quatis",
+    "code": "330412",
+    "reggov": "Região do Médio Paraíba",
+    "mun_zc": 0,
+    "bbox": [
+      -44.3425823,
+      -22.486359,
+      -44.1453614,
+      -22.2388179
+    ]
+  },
+  {
+    "name": "Queimados",
+    "code": "330414",
+    "reggov": "Região Metropolitana",
+    "mun_zc": 1,
+    "bbox": [
+      -43.6448125,
+      -22.7833112,
+      -43.5121836,
+      -22.6794213
+    ]
+  },
+  {
+    "name": "Quissamã",
+    "code": "330415",
+    "reggov": "Região Norte Fluminense",
+    "mun_zc": 1,
+    "bbox": [
+      -41.7178825,
+      -22.2346127,
+      -41.1329509,
+      -21.9865853
+    ]
+  },
+  {
+    "name": "Resende",
+    "code": "330420",
+    "reggov": "Região do Médio Paraíba",
+    "mun_zc": 0,
+    "bbox": [
+      -44.8091705,
+      -22.6413151,
+      -44.2346207,
+      -22.2427696
+    ]
+  },
+  {
+    "name": "Rio Bonito",
+    "code": "330430",
+    "reggov": "Região Metropolitana",
+    "mun_zc": 0,
+    "bbox": [
+      -42.747222,
+      -22.8548975,
+      -42.441784,
+      -22.6189296
+    ]
+  },
+  {
+    "name": "Rio Claro",
+    "code": "330440",
+    "reggov": "Região do Médio Paraíba",
+    "mun_zc": 0,
+    "bbox": [
+      -44.3181045,
+      -22.9320364,
+      -43.873008,
+      -22.6397814
+    ]
+  },
+  {
+    "name": "Rio das Flores",
+    "code": "330450",
+    "reggov": "Região do Médio Paraíba",
+    "mun_zc": 0,
+    "bbox": [
+      -43.6743932,
+      -22.2883033,
+      -43.4004141,
+      -22.0515524
+    ]
+  },
+  {
+    "name": "Rio das Ostras",
+    "code": "330452",
+    "reggov": "Região das Baixadas Litorâneas",
+    "mun_zc": 1,
+    "bbox": [
+      -42.0635168,
+      -22.5624619,
+      -41.817955,
+      -22.3767508
+    ]
+  },
+  {
+    "name": "Rio de Janeiro",
+    "code": "330455",
+    "reggov": "Região Metropolitana",
+    "mun_zc": 1,
+    "bbox": [
+      -43.7960909,
+      -23.0823789,
+      -43.0991495,
+      -22.7459728
+    ]
+  },
+  {
+    "name": "Santa Maria Madalena",
+    "code": "330460",
+    "reggov": "Região Serrana",
+    "mun_zc": 0,
+    "bbox": [
+      -42.1395316,
+      -22.1006921,
+      -41.7026004,
+      -21.8030947
+    ]
+  },
+  {
+    "name": "Santo Antônio de Pádua",
+    "code": "330470",
+    "reggov": "Região Noroeste Fluminense",
+    "mun_zc": 0,
+    "bbox": [
+      -42.3705764,
+      -21.7148494,
+      -41.9931487,
+      -21.4275161
+    ]
+  },
+  {
+    "name": "Sapucaia",
+    "code": "330540",
+    "reggov": "Região Centro-Sul Fluminense",
+    "mun_zc": 0,
+    "bbox": [
+      -43.016272,
+      -22.1653291,
+      -42.6622142,
+      -21.8729578
+    ]
+  },
+  {
+    "name": "Saquarema",
+    "code": "330550",
+    "reggov": "Região das Baixadas Litorâneas",
+    "mun_zc": 1,
+    "bbox": [
+      -42.6796303,
+      -22.9445864,
+      -42.3699335,
+      -22.804061
+    ]
+  },
+  {
+    "name": "Seropédica",
+    "code": "330555",
+    "reggov": "Região Metropolitana",
+    "mun_zc": 1,
+    "bbox": [
+      -43.7935152,
+      -22.8640462,
+      -43.6220128,
+      -22.6398166
+    ]
+  },
+  {
+    "name": "Silva Jardim",
+    "code": "330560",
+    "reggov": "Região das Baixadas Litorâneas",
+    "mun_zc": 0,
+    "bbox": [
+      -42.6033599,
+      -22.7364399,
+      -42.1869353,
+      -22.4011801
+    ]
+  },
+  {
+    "name": "Sumidouro",
+    "code": "330570",
+    "reggov": "Região Serrana",
+    "mun_zc": 0,
+    "bbox": [
+      -42.7605813,
+      -22.2667345,
+      -42.5479016,
+      -21.9693209
+    ]
+  },
+  {
+    "name": "São Fidelis",
+    "code": "330480",
+    "reggov": "Região Norte Fluminense",
+    "mun_zc": 0,
+    "bbox": [
+      -41.971211,
+      -21.8783048,
+      -41.5381356,
+      -21.464313
+    ]
+  },
+  {
+    "name": "São Francisco de Itabapoana",
+    "code": "330475",
+    "reggov": "Região Norte Fluminense",
+    "mun_zc": 1,
+    "bbox": [
+      -41.3128949,
+      -21.6892084,
+      -40.9592674,
+      -21.2181269
+    ]
+  },
+  {
+    "name": "São Gonçalo",
+    "code": "330490",
+    "reggov": "Região Metropolitana",
+    "mun_zc": 1,
+    "bbox": [
+      -43.1153938,
+      -22.9091971,
+      -42.885451,
+      -22.7340701
+    ]
+  },
+  {
+    "name": "São José de Ubá",
+    "code": "330513",
+    "reggov": "Região Noroeste Fluminense",
+    "mun_zc": 0,
+    "bbox": [
+      -42.0580629,
+      -21.488853,
+      -41.8160149,
+      -21.2883179
+    ]
+  },
+  {
+    "name": "São José do Vale do Rio Preto",
+    "code": "330515",
+    "reggov": "Região Serrana",
+    "mun_zc": 0,
+    "bbox": [
+      -43.0477635,
+      -22.2646794,
+      -42.7446002,
+      -22.0842632
+    ]
+  },
+  {
+    "name": "São João da Barra",
+    "code": "330500",
+    "reggov": "Região Norte Fluminense",
+    "mun_zc": 1,
+    "bbox": [
+      -41.1943175,
+      -21.911936,
+      -40.9818153,
+      -21.6145251
+    ]
+  },
+  {
+    "name": "São João de Meriti",
+    "code": "330510",
+    "reggov": "Região Metropolitana",
+    "mun_zc": 1,
+    "bbox": [
+      -43.4104641,
+      -22.8148091,
+      -43.329209,
+      -22.7559024
+    ]
+  },
+  {
+    "name": "São Pedro da Aldeia",
+    "code": "330520",
+    "reggov": "Região das Baixadas Litorâneas",
+    "mun_zc": 1,
+    "bbox": [
+      -42.2538856,
+      -22.9093126,
+      -42.0249981,
+      -22.6533646
+    ]
+  },
+  {
+    "name": "São Sebastião do Alto",
+    "code": "330530",
+    "reggov": "Região Serrana",
+    "mun_zc": 0,
+    "bbox": [
+      -42.2441204,
+      -22.0247397,
+      -41.9298674,
+      -21.7284967
+    ]
+  },
+  {
+    "name": "Tanguá",
+    "code": "330575",
+    "reggov": "Região Metropolitana",
+    "mun_zc": 0,
+    "bbox": [
+      -42.8052117,
+      -22.8591317,
+      -42.6433563,
+      -22.6865326
+    ]
+  },
+  {
+    "name": "Teresópolis",
+    "code": "330580",
+    "reggov": "Região Serrana",
+    "mun_zc": 0,
+    "bbox": [
+      -43.0462553,
+      -22.4711724,
+      -42.7110089,
+      -22.1243956
+    ]
+  },
+  {
+    "name": "Trajano de Moraes",
+    "code": "330590",
+    "reggov": "Região Serrana",
+    "mun_zc": 0,
+    "bbox": [
+      -42.2976193,
+      -22.307094,
+      -41.9578042,
+      -22.0042178
+    ]
+  },
+  {
+    "name": "Três Rios",
+    "code": "330600",
+    "reggov": "Região Centro-Sul Fluminense",
+    "mun_zc": 0,
+    "bbox": [
+      -43.2588207,
+      -22.2086149,
+      -42.9549481,
+      -22.0296128
+    ]
+  },
+  {
+    "name": "Valença",
+    "code": "330610",
+    "reggov": "Região do Médio Paraíba",
+    "mun_zc": 0,
+    "bbox": [
+      -44.1891705,
+      -22.4032005,
+      -43.5864565,
+      -22.0622394
+    ]
+  },
+  {
+    "name": "Varre-Sai",
+    "code": "330615",
+    "reggov": "Região Noroeste Fluminense",
+    "mun_zc": 0,
+    "bbox": [
+      -41.9183554,
+      -20.9878858,
+      -41.736294,
+      -20.7997666
+    ]
+  },
+  {
+    "name": "Vassouras",
+    "code": "330620",
+    "reggov": "Região Centro-Sul Fluminense",
+    "mun_zc": 0,
+    "bbox": [
+      -43.7797713,
+      -22.5264792,
+      -43.3253957,
+      -22.2148954
+    ]
+  },
+  {
+    "name": "Volta Redonda",
+    "code": "330630",
+    "reggov": "Região do Médio Paraíba",
+    "mun_zc": 0,
+    "bbox": [
+      -44.1560279,
+      -22.6405916,
+      -44.0027867,
+      -22.4062726
+    ]
+  }
+]

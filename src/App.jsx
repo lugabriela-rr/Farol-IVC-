@@ -1,5 +1,5 @@
-import React, { useState, useMemo, useEffect } from 'react';
-import { Sun, Moon } from 'lucide-react';
+import React, { useEffect, useMemo, useState } from 'react';
+import { Moon, Sun } from 'lucide-react';
 import MapComponent from './components/MapComponent';
 import Sidebar from './components/Sidebar';
 import { layersConfig } from './config/layers';
@@ -7,75 +7,76 @@ import { layersConfig } from './config/layers';
 function App() {
   const [activeLayers, setActiveLayers] = useState([]);
   const [activeBasemap, setActiveBasemap] = useState('urbano');
-  const [searchQuery, setSearchQuery] = useState('');
-  
-  // Theme state
+  const [municipalities, setMunicipalities] = useState([]);
+  const [selectedMunicipality, setSelectedMunicipality] = useState(null);
   const [isDarkMode, setIsDarkMode] = useState(() => {
     const saved = localStorage.getItem('theme');
     if (saved) return saved === 'dark';
-    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    return window.matchMedia?.('(prefers-color-scheme: dark)').matches ?? false;
   });
 
   useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.setAttribute('data-theme', 'dark');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      document.documentElement.removeAttribute('data-theme');
-      localStorage.setItem('theme', 'light');
-    }
+    document.documentElement.dataset.theme = isDarkMode ? 'dark' : 'light';
+    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
   }, [isDarkMode]);
 
-  // Extract all layer categories
+  useEffect(() => {
+    fetch('/data/municipios_index.json')
+      .then((response) => {
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        return response.json();
+      })
+      .then(setMunicipalities)
+      .catch((error) => console.error('Falha ao carregar índice municipal:', error));
+  }, []);
+
   const categories = useMemo(() => {
     const cats = {};
-    layersConfig.forEach(layer => {
-      if (!cats[layer.category]) {
-        cats[layer.category] = {};
-      }
-      if (!cats[layer.category][layer.group]) {
-        cats[layer.category][layer.group] = [];
-      }
+    layersConfig.forEach((layer) => {
+      cats[layer.category] ??= {};
+      cats[layer.category][layer.group] ??= [];
       cats[layer.category][layer.group].push(layer);
     });
     return cats;
   }, []);
 
   const toggleLayer = (layerId) => {
-    setActiveLayers(prev => 
-      prev.includes(layerId) 
-        ? prev.filter(id => id !== layerId)
-        : [...prev, layerId]
+    setActiveLayers((current) =>
+      current.includes(layerId)
+        ? current.filter((id) => id !== layerId)
+        : [...current, layerId]
     );
   };
 
-  const toggleTheme = () => setIsDarkMode(!isDarkMode);
-
   return (
     <div className="app-container">
-      {/* Discreet Header */}
-      <div className="app-header">
-        <div className="header-controls">
-          <button className="theme-toggle" onClick={toggleTheme} aria-label="Alternar tema">
-            {isDarkMode ? <Sun size={18} /> : <Moon size={18} />}
-          </button>
-        </div>
+      <div className="map-container">
+        <MapComponent
+          activeLayers={activeLayers}
+          activeBasemap={activeBasemap}
+          selectedMunicipality={selectedMunicipality}
+        />
       </div>
 
-      <Sidebar 
+      <Sidebar
         categories={categories}
         activeLayers={activeLayers}
         toggleLayer={toggleLayer}
         activeBasemap={activeBasemap}
         setActiveBasemap={setActiveBasemap}
-        onSearch={(q) => setSearchQuery(q)}
+        municipalities={municipalities}
+        onSelectMunicipality={setSelectedMunicipality}
       />
-      <div className="map-container">
-        <MapComponent 
-          activeLayers={activeLayers}
-          activeBasemap={activeBasemap}
-          searchQuery={searchQuery}
-        />
+
+      <div className="app-header">
+        <button
+          className="theme-toggle"
+          onClick={() => setIsDarkMode((value) => !value)}
+          aria-label={isDarkMode ? 'Ativar tema claro' : 'Ativar tema escuro'}
+          title={isDarkMode ? 'Tema claro' : 'Tema escuro'}
+        >
+          {isDarkMode ? <Sun size={17} strokeWidth={1.8} /> : <Moon size={17} strokeWidth={1.8} />}
+        </button>
       </div>
     </div>
   );

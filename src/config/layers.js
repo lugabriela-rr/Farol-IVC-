@@ -1,7 +1,4 @@
 export const layersConfig = [
-  // ---------------------------------------------------------
-  // ÍNDICE DE VULNERABILIDADE COSTEIRA
-  // ---------------------------------------------------------
   {
     id: 'ivc_geral',
     name: 'IVC Geral',
@@ -9,8 +6,7 @@ export const layersConfig = [
     group: 'Índices',
     status: 'Em desenvolvimento',
     sourceType: null,
-    url: null,
-    metadata: { description: 'Índice de Vulnerabilidade Costeira consolidado.' }
+    url: null
   },
   {
     id: 'ivc_biofisico',
@@ -31,9 +27,6 @@ export const layersConfig = [
     url: null
   },
 
-  // ---------------------------------------------------------
-  // VARIÁVEIS - Biofísicas
-  // ---------------------------------------------------------
   {
     id: 'var_tipologia',
     name: 'Tipologia da Linha de Costa',
@@ -48,16 +41,22 @@ export const layersConfig = [
       'line-color': [
         'match',
         ['get', 'tipo_legen'],
-        'Praia Arenosa', '#f1c40f', // Amarelo
-        'Costão Rochoso', '#7f8c8d', // Cinza escuro
-        'Mangue', '#27ae60', // Verde
-        'Tecnógeno', '#c0392b', // Vermelho
-        /* default */ '#bdc3c7'
+        'Praia Arenosa', '#f2d64b',
+        'Costão Rochoso', '#7b4ab8',
+        'Mangue', '#2f9e63',
+        'Tecnógeno', '#d64c4c',
+        '#b8bec8'
       ]
     },
+    legend: [
+      { label: 'Praia Arenosa', color: '#f2d64b' },
+      { label: 'Costão Rochoso', color: '#7b4ab8' },
+      { label: 'Mangue', color: '#2f9e63' },
+      { label: 'Tecnógeno', color: '#d64c4c' }
+    ],
     popupFields: [
       { field: 'tipo_legen', label: 'Tipologia' },
-      { field: 'km', label: 'Extensão (km)' }
+      { field: 'km', label: 'Extensão (km)', decimals: 2 }
     ]
   },
   {
@@ -72,18 +71,26 @@ export const layersConfig = [
     paint: {
       'line-width': 4,
       'line-color': [
-        'match',
-        ['get', 'classe_exp'],
-        1, '#2ecc71', // Baixa (Verde)
-        2, '#f1c40f', // Média (Amarelo)
-        3, '#e74c3c', // Alta (Vermelho)
-        /* default */ '#95a5a6'
+        'step',
+        ['get', 'I_Ond_norm'],
+        '#159c6b',
+        0.18, '#a8cf45',
+        0.43, '#f1d447',
+        0.59, '#f39b2f',
+        0.76, '#e43d30'
       ]
     },
+    legend: [
+      { label: '0,08 – 0,17', color: '#159c6b' },
+      { label: '0,18 – 0,42', color: '#a8cf45' },
+      { label: '0,43 – 0,58', color: '#f1d447' },
+      { label: '0,59 – 0,75', color: '#f39b2f' },
+      { label: '0,76 – 1,00', color: '#e43d30' }
+    ],
     popupFields: [
-      { field: 'classe_exp', label: 'Classe de Exposição (1-3)' },
-      { field: 'Class_altu', label: 'Altura' },
-      { field: 'Ind_Ondas', label: 'Índice Numérico' }
+      { field: 'I_Ond_norm', label: 'Índice normalizado', decimals: 2 },
+      { field: 'Ind_Ondas', label: 'Indicador de ondas', decimals: 2 },
+      { field: 'classe_exp', label: 'Classe de exposição' }
     ]
   },
   {
@@ -99,25 +106,30 @@ export const layersConfig = [
       'fill-color': [
         'step',
         ['get', 'LRR'],
-        '#d7191c', // Erosão alta (< -1)
-        -1, '#fdae61', // Erosão moderada (-1 a -0.2)
-        -0.2, '#ffffbf', // Estável (-0.2 a 0.2)
-        0.2, '#a6d96a', // Acreção moderada (0.2 a 1)
-        1, '#1a9641' // Acreção alta (> 1)
+        '#7a2e12',
+        -3, '#e53935',
+        -1, '#f39c12',
+        -0.5, '#d7ef36',
+        0.5, '#42c92f'
       ],
-      'fill-opacity': 0.8
+      'fill-opacity': 0.82,
+      'fill-outline-color': 'rgba(0,0,0,0.12)'
     },
+    legend: [
+      { label: 'Erosão extrema (< -3 m/ano)', color: '#7a2e12' },
+      { label: 'Erosão severa (-3 a -1)', color: '#e53935' },
+      { label: 'Erosão (-1 a -0,5)', color: '#f39c12' },
+      { label: 'Estabilidade (-0,5 a +0,5)', color: '#d7ef36' },
+      { label: 'Acreção (> +0,5)', color: '#42c92f' }
+    ],
     popupFields: [
-      { field: 'LRR', label: 'Taxa LRR (m/ano)' },
-      { field: 'EPR', label: 'Taxa EPR (m/ano)' },
-      { field: 'SCE', label: 'Variação SCE (m)' },
-      { field: 'NSM', label: 'Variação NSM (m)' }
+      { field: 'TransectId', label: 'Transecto' },
+      { field: 'LRR', label: 'LRR (m/ano)', decimals: 2 },
+      { field: 'tipo_legen', label: 'Tipologia' },
+      { field: 'LR2', label: 'R²', decimals: 2 },
+      { field: 'LCI', label: 'Intervalo de confiança', decimals: 2 }
     ]
   },
-
-  // ---------------------------------------------------------
-  // VARIÁVEIS - Sociais
-  // ---------------------------------------------------------
   {
     id: 'var_social_placeholder',
     name: 'Dados em desenvolvimento',
@@ -128,9 +140,6 @@ export const layersConfig = [
     url: null
   },
 
-  // ---------------------------------------------------------
-  // ÁREAS DE ESTUDO
-  // ---------------------------------------------------------
   {
     id: 'ae_rh',
     name: 'Regiões Hidrográficas',
@@ -141,13 +150,15 @@ export const layersConfig = [
     url: '/data/web_regioes_hidrograficas.geojson',
     type: 'fill',
     paint: {
-      'fill-color': '#3498db',
-      'fill-opacity': 0.2,
-      'fill-outline-color': '#2980b9'
+      'fill-color': '#4b91c7',
+      'fill-opacity': 0.14,
+      'fill-outline-color': '#2b6e9e'
     },
+    legend: [{ label: 'Regiões Hidrográficas', color: '#4b91c7' }],
     popupFields: [
+      { field: 'rh', label: 'Código' },
       { field: 'nome_rh', label: 'Região Hidrográfica' },
-      { field: 'areakm2', label: 'Área (km²)' }
+      { field: 'areakm2', label: 'Área (km²)', decimals: 1 }
     ]
   },
   {
@@ -160,13 +171,14 @@ export const layersConfig = [
     url: '/data/web_CBA_biofisica.geojson',
     type: 'fill',
     paint: {
-      'fill-color': '#2ecc71',
-      'fill-opacity': 0.3,
-      'fill-outline-color': '#27ae60'
+      'fill-color': '#42b883',
+      'fill-opacity': 0.19,
+      'fill-outline-color': '#238861'
     },
+    legend: [{ label: 'CBA Biofísica', color: '#42b883' }],
     popupFields: [
       { field: 'Classe', label: 'Classe' },
-      { field: 'Area_km2', label: 'Área (km²)' }
+      { field: 'Area_km2', label: 'Área (km²)', decimals: 1 }
     ]
   },
   {
@@ -179,13 +191,12 @@ export const layersConfig = [
     url: '/data/web_CBA_social.geojson',
     type: 'fill',
     paint: {
-      'fill-color': '#f1c40f',
-      'fill-opacity': 0.3,
-      'fill-outline-color': '#f39c12'
+      'fill-color': '#e3bd35',
+      'fill-opacity': 0.2,
+      'fill-outline-color': '#b99312'
     },
-    popupFields: [
-      { field: 'areakm2', label: 'Área (km²)' }
-    ]
+    legend: [{ label: 'CBA Social', color: '#e3bd35' }],
+    popupFields: [{ field: 'areakm2', label: 'Área (km²)', decimals: 1 }]
   },
   {
     id: 'ae_zona_costeira',
@@ -197,10 +208,11 @@ export const layersConfig = [
     url: '/data/web_municipios_zona_costeira.geojson',
     type: 'fill',
     paint: {
-      'fill-color': '#9b59b6',
-      'fill-opacity': 0.2,
-      'fill-outline-color': '#8e44ad'
+      'fill-color': '#8f63c6',
+      'fill-opacity': 0.12,
+      'fill-outline-color': '#7447ad'
     },
+    legend: [{ label: 'Zona Costeira', color: '#8f63c6' }],
     popupFields: []
   },
   {
@@ -213,13 +225,15 @@ export const layersConfig = [
     url: '/data/web_area_influencia_contiental.geojson',
     type: 'fill',
     paint: {
-      'fill-color': '#e67e22',
-      'fill-opacity': 0.2,
-      'fill-outline-color': '#d35400'
+      'fill-color': '#d98b48',
+      'fill-opacity': 0.15,
+      'fill-outline-color': '#ac6427'
     },
+    legend: [{ label: 'Área de Influência Continental', color: '#d98b48' }],
     popupFields: [
+      { field: 'rh', label: 'Código da RH' },
       { field: 'nome_rh', label: 'Região Hidrográfica' },
-      { field: 'area_km', label: 'Área (km²)' }
+      { field: 'area_km', label: 'Área (km²)', decimals: 1 }
     ]
   },
   {
@@ -230,23 +244,21 @@ export const layersConfig = [
     status: 'Concluído',
     sourceType: 'geojson',
     url: '/data/web_municipios.geojson',
-    filter: ['==', 'mun', 1],
+    filter: ['==', 'mun_zc', 1],
     type: 'fill',
     paint: {
-      'fill-color': '#1abc9c',
-      'fill-opacity': 0.3,
-      'fill-outline-color': '#16a085'
+      'fill-color': '#35b9a4',
+      'fill-opacity': 0.18,
+      'fill-outline-color': '#148a79'
     },
+    legend: [{ label: 'Municípios da Zona Costeira', color: '#35b9a4' }],
     popupFields: [
       { field: 'municn', label: 'Município' },
       { field: 'reggov', label: 'Região de Governo' },
-      { field: 'area_km2', label: 'Área (km²)' }
+      { field: 'area_km2', label: 'Área (km²)', decimals: 1 }
     ]
   },
 
-  // ---------------------------------------------------------
-  // BASES CARTOGRÁFICAS
-  // ---------------------------------------------------------
   {
     id: 'bc_municipios',
     name: 'Municípios do RJ',
@@ -258,8 +270,10 @@ export const layersConfig = [
     type: 'line',
     paint: {
       'line-width': 1,
-      'line-color': '#7f8c8d'
+      'line-color': '#6f7884',
+      'line-opacity': 0.72
     },
+    legend: [{ label: 'Limites municipais', color: '#6f7884' }],
     popupFields: [
       { field: 'municn', label: 'Município' },
       { field: 'reggov', label: 'Região de Governo' }
@@ -275,14 +289,16 @@ export const layersConfig = [
     url: '/data/web_massa_dagua.geojson',
     type: 'fill',
     paint: {
-      'fill-color': '#85c1e9',
-      'fill-opacity': 0.6,
-      'fill-outline-color': '#3498db'
+      'fill-color': '#70b6dc',
+      'fill-opacity': 0.48,
+      'fill-outline-color': '#3b8db9'
     },
+    legend: [{ label: 'Massa d’água', color: '#70b6dc' }],
     popupFields: [
       { field: 'NOME', label: 'Nome' },
       { field: 'TIPOTRECHO', label: 'Tipo' },
-      { field: 'SALINIDADE', label: 'Salinidade' }
+      { field: 'SALINIDADE', label: 'Salinidade' },
+      { field: 'REGIME', label: 'Regime' }
     ]
   },
   {
@@ -290,9 +306,8 @@ export const layersConfig = [
     name: 'MDE (Modelo Digital de Elevação)',
     category: 'BASES CARTOGRÁFICAS',
     group: 'Bases Cartográficas',
-    status: 'Preparado para configuração',
+    status: 'Em preparação para web',
     sourceType: null,
-    url: null,
-    metadata: { description: 'Aguardando processamento XYZ/COG.' }
+    url: null
   }
 ];
