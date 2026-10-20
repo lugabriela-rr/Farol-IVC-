@@ -1,27 +1,27 @@
-const osmAttribution = '&copy; OpenStreetMap contributors';
-const cartoAttribution = `${osmAttribution} &copy; CARTO`;
+const esriAttribution = 'Esri, HERE, Garmin, USGS, NGA, EPA, USDA, NPS';
 
 export const basemaps = {
-  terreno: {
-    id: 'terreno',
-    name: 'Terreno / MDE',
-    shortName: 'Terreno',
-    description: 'Base neutra provisória enquanto o MDE do projeto é preparado para web.',
+  relevo: {
+    id: 'relevo',
+    name: 'Relevo / Altimetria',
+    shortName: 'Relevo',
+    description: 'Mapa topográfico com relevo sombreado, cores hipsométricas e curvas de nível (OpenTopoMap).',
     style: {
       version: 8,
       sources: {
-        'carto-light': {
+        opentopomap: {
           type: 'raster',
           tiles: [
-            'https://a.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png',
-            'https://b.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png',
-            'https://c.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png'
+            'https://a.tile.opentopomap.org/{z}/{x}/{y}.png',
+            'https://b.tile.opentopomap.org/{z}/{x}/{y}.png',
+            'https://c.tile.opentopomap.org/{z}/{x}/{y}.png'
           ],
           tileSize: 256,
-          attribution: cartoAttribution
+          maxzoom: 17,
+          attribution: 'Dados: &copy; OpenStreetMap contributors, SRTM | Estilo: &copy; OpenTopoMap (CC-BY-SA)'
         }
       },
-      layers: [{ id: 'carto-light-layer', type: 'raster', source: 'carto-light' }]
+      layers: [{ id: 'opentopomap-layer', type: 'raster', source: 'opentopomap' }]
     }
   },
   satelite: {
@@ -46,22 +46,18 @@ export const basemaps = {
     id: 'urbano',
     name: 'Urbano / Viário',
     shortName: 'Urbano',
-    description: 'Base com localidades, ruas e rodovias.',
+    description: 'Base com localidades, ruas e rodovias (Esri World Street Map).',
     style: {
       version: 8,
       sources: {
-        'carto-voyager': {
+        'esri-streets': {
           type: 'raster',
-          tiles: [
-            'https://a.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png',
-            'https://b.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png',
-            'https://c.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png'
-          ],
+          tiles: ['https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}'],
           tileSize: 256,
-          attribution: cartoAttribution
+          attribution: esriAttribution
         }
       },
-      layers: [{ id: 'carto-voyager-layer', type: 'raster', source: 'carto-voyager' }]
+      layers: [{ id: 'esri-streets-layer', type: 'raster', source: 'esri-streets' }]
     }
   }
 };

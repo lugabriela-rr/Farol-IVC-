@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react';
-import { ChevronDown, ChevronRight, PanelLeftClose, PanelLeftOpen, Search } from 'lucide-react';
+import { ChevronDown, ChevronRight, Instagram, Mail, PanelLeftClose, PanelLeftOpen, Search } from 'lucide-react';
 import { basemaps } from '../config/basemaps';
 
 const Sidebar = ({
@@ -126,6 +126,22 @@ const Sidebar = ({
             })}
           </div>
         </div>
+
+        <footer className="sidebar-footer">
+          <a
+            href="https://www.instagram.com/projeto.farol.ivc/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-link"
+          >
+            <Instagram size={15} strokeWidth={1.7} />
+            <span>@projeto.farol.ivc</span>
+          </a>
+          <a href="mailto:farol.ivc.uff@gmail.com" className="contact-link">
+            <Mail size={15} strokeWidth={1.7} />
+            <span>farol.ivc.uff@gmail.com</span>
+          </a>
+        </footer>
       </aside>
 
       <button
