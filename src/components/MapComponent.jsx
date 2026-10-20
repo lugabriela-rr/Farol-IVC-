@@ -101,6 +101,14 @@ const MapComponent = ({ activeLayers, activeBasemap, selectedMunicipality }) => 
                 {...(layer.layout ? { layout: layer.layout } : {})}
                 {...(Array.isArray(layer.filter) ? { filter: layer.filter } : {})}
               />
+              {layer.outline && (
+                <Layer
+                  id={`${layer.id}-outline`}
+                  type="line"
+                  paint={layer.outline}
+                  {...(Array.isArray(layer.filter) ? { filter: layer.filter } : {})}
+                />
+              )}
             </Source>
           );
         })}
@@ -162,7 +170,7 @@ const Legend = ({ activeLayerConfigs }) => {
             {layer.legend.map((item) => (
               <div className="legend-item" key={`${layer.id}-${item.label}`}>
                 <span
-                  className={`legend-swatch ${layer.type === 'line' ? 'line' : ''}`}
+                  className={`legend-swatch ${layer.type === 'line' || item.line ? 'line' : ''}`}
                   style={{ backgroundColor: item.color }}
                 />
                 <span>{item.label}</span>

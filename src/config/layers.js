@@ -149,12 +149,18 @@ export const layersConfig = [
     sourceType: 'geojson',
     url: '/data/web_regioes_hidrograficas.geojson',
     type: 'fill',
+    // Preenchimento transparente (mantido para o clique/popup) e limites
+    // destacados por uma linha azul mais grossa que as demais camadas.
     paint: {
-      'fill-color': '#4b91c7',
-      'fill-opacity': 0.14,
-      'fill-outline-color': '#2b6e9e'
+      'fill-color': '#1f5fa8',
+      'fill-opacity': 0
     },
-    legend: [{ label: 'Regiões Hidrográficas', color: '#4b91c7' }],
+    outline: {
+      'line-color': '#1f5fa8',
+      'line-width': 3,
+      'line-opacity': 0.95
+    },
+    legend: [{ label: 'Limites das Regiões Hidrográficas', color: '#1f5fa8', line: true }],
     popupFields: [
       { field: 'rh', label: 'Código' },
       { field: 'nome_rh', label: 'Região Hidrográfica' },
