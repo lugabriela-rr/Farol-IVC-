@@ -1,28 +1,13 @@
-const esriAttribution = 'Esri, HERE, Garmin, USGS, NGA, EPA, USDA, NPS';
+const cartoAttribution = '&copy; OpenStreetMap contributors &copy; CARTO';
 
 export const basemaps = {
-  relevo: {
-    id: 'relevo',
-    name: 'Relevo / Altimetria',
-    shortName: 'Relevo',
-    description: 'Mapa topográfico com relevo sombreado, cores hipsométricas e curvas de nível (OpenTopoMap).',
-    style: {
-      version: 8,
-      sources: {
-        opentopomap: {
-          type: 'raster',
-          tiles: [
-            'https://a.tile.opentopomap.org/{z}/{x}/{y}.png',
-            'https://b.tile.opentopomap.org/{z}/{x}/{y}.png',
-            'https://c.tile.opentopomap.org/{z}/{x}/{y}.png'
-          ],
-          tileSize: 256,
-          maxzoom: 17,
-          attribution: 'Dados: &copy; OpenStreetMap contributors, SRTM | Estilo: &copy; OpenTopoMap (CC-BY-SA)'
-        }
-      },
-      layers: [{ id: 'opentopomap-layer', type: 'raster', source: 'opentopomap' }]
-    }
+  claro: {
+    id: 'claro',
+    name: 'Claro (CARTO Positron)',
+    shortName: 'Claro',
+    description: 'Base clara e neutra, ideal para destacar as camadas temáticas (CARTO Positron).',
+    attribution: cartoAttribution,
+    style: 'https://basemaps.cartocdn.com/gl/positron-gl-style/style.json'
   },
   satelite: {
     id: 'satelite',
@@ -44,20 +29,10 @@ export const basemaps = {
   },
   urbano: {
     id: 'urbano',
-    name: 'Urbano / Viário',
+    name: 'Urbano / Viário (CARTO Voyager)',
     shortName: 'Urbano',
-    description: 'Base com localidades, ruas e rodovias (Esri World Street Map).',
-    style: {
-      version: 8,
-      sources: {
-        'esri-streets': {
-          type: 'raster',
-          tiles: ['https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}'],
-          tileSize: 256,
-          attribution: esriAttribution
-        }
-      },
-      layers: [{ id: 'esri-streets-layer', type: 'raster', source: 'esri-streets' }]
-    }
+    description: 'Base com localidades, ruas e rodovias (CARTO Voyager).',
+    attribution: cartoAttribution,
+    style: 'https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json'
   }
 };
