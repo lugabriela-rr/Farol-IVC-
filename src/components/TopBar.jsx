@@ -1,9 +1,10 @@
 import React from 'react';
-import { BookOpen, Map, Moon, Sun, TowerControl } from 'lucide-react';
+import { BookOpen, Library, Map, Moon, Sun, TowerControl } from 'lucide-react';
 
 const tabs = [
   { id: 'analise', label: 'Análise Geral', icon: TowerControl },
   { id: 'construtor', label: 'Construtor de Mapas', icon: Map },
+  { id: 'atlas', label: 'Atlas Digital', icon: Library },
   { id: 'metodologia', label: 'Metodologia', icon: BookOpen }
 ];
 

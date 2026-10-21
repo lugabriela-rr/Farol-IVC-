@@ -177,11 +177,11 @@ export const layersConfig = [
     url: '/data/web_CBA_biofisica.geojson',
     type: 'fill',
     paint: {
-      'fill-color': '#42b883',
+      'fill-color': '#fa8072',
       'fill-opacity': 0.19,
-      'fill-outline-color': '#238861'
+      'fill-outline-color': '#d9604f'
     },
-    legend: [{ label: 'CBA Biofísica', color: '#42b883' }],
+    legend: [{ label: 'CBA Biofísica', color: '#fa8072' }],
     popupFields: [
       { field: 'Classe', label: 'Classe' },
       { field: 'Area_km2', label: 'Área (km²)', decimals: 1 }

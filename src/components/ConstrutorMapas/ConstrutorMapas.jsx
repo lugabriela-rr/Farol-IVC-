@@ -32,7 +32,7 @@ const ConstrutorMapas = ({ municipalities }) => {
   const exportRef = useRef(null);
   const [title, setTitle] = useState('Mapa da Zona Costeira do RJ');
   const [municipalityCode, setMunicipalityCode] = useState('');
-  const [basemapId, setBasemapId] = useState('claro');
+  const [basemapId, setBasemapId] = useState('relevo');
   const [isExporting, setIsExporting] = useState(false);
   // A ordem da lista define a ordem de desenho: o primeiro item fica por cima.
   const [variables, setVariables] = useState(() =>
@@ -195,7 +195,7 @@ const ConstrutorMapas = ({ municipalities }) => {
           <Map
             ref={mapRef}
             initialViewState={RJ_VIEW}
-            mapStyle={basemaps[basemapId]?.style || basemaps.claro.style}
+            mapStyle={basemaps[basemapId]?.style || basemaps.relevo.style}
             style={{ width: '100%', height: '100%' }}
             onLoad={handleLoad}
             preserveDrawingBuffer
@@ -240,7 +240,7 @@ const ConstrutorMapas = ({ municipalities }) => {
           </div>
 
           <div className="cm-north" aria-label="Norte">
-            <svg viewBox="0 0 40 52" width="32" height="42" aria-hidden="true">
+            <svg viewBox="0 0 40 52" width="48" height="62" aria-hidden="true">
               <text x="20" y="11" textAnchor="middle" fontSize="11" fontWeight="700" fill="#183041">N</text>
               <polygon points="20,14 30,46 20,39" fill="#183041" />
               <polygon points="20,14 10,46 20,39" fill="#ffffff" stroke="#183041" strokeWidth="1.2" />
