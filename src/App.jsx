@@ -4,6 +4,7 @@ import Sidebar from './components/Sidebar';
 import TopBar from './components/TopBar';
 import ConstrutorMapas from './components/ConstrutorMapas/ConstrutorMapas';
 import Metodologia from './components/Metodologia/Metodologia';
+import AtlasDigital from './components/AtlasDigital/AtlasDigital';
 import { layersConfig } from './config/layers';
 
 function App() {
@@ -84,6 +85,8 @@ function App() {
         )}
 
         {activeTab === 'construtor' && <ConstrutorMapas municipalities={municipalities} />}
+
+        {activeTab === 'atlas' && <AtlasDigital />}
 
         {activeTab === 'metodologia' && <Metodologia />}
       </main>

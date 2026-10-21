@@ -1,13 +1,50 @@
 const cartoAttribution = '&copy; OpenStreetMap contributors &copy; CARTO';
 
 export const basemaps = {
-  claro: {
-    id: 'claro',
-    name: 'Claro (CARTO Positron)',
-    shortName: 'Claro',
-    description: 'Base clara e neutra, ideal para destacar as camadas temáticas (CARTO Positron).',
-    attribution: cartoAttribution,
-    style: 'https://basemaps.cartocdn.com/gl/positron-gl-style/style.json'
+  relevo: {
+    id: 'relevo',
+    name: 'Relevo sombreado',
+    shortName: 'Relevo',
+    description: 'Base clara com relevo sombreado (hillshade) gerado a partir de modelo digital de elevação.',
+    style: {
+      version: 8,
+      sources: {
+        'carto-light': {
+          type: 'raster',
+          tiles: ['a', 'b', 'c', 'd'].map((s) => `https://${s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png`),
+          tileSize: 256,
+          attribution: cartoAttribution
+        },
+        'carto-labels': {
+          type: 'raster',
+          tiles: ['a', 'b', 'c', 'd'].map((s) => `https://${s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}.png`),
+          tileSize: 256
+        },
+        terrain: {
+          type: 'raster-dem',
+          tiles: ['https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png'],
+          tileSize: 256,
+          maxzoom: 15,
+          encoding: 'terrarium',
+          attribution: 'Elevação: Mapzen Terrain Tiles (AWS Open Data)'
+        }
+      },
+      layers: [
+        { id: 'carto-light-layer', type: 'raster', source: 'carto-light' },
+        {
+          id: 'hillshade-layer',
+          type: 'hillshade',
+          source: 'terrain',
+          paint: {
+            'hillshade-exaggeration': 0.55,
+            'hillshade-shadow-color': '#4f5f68',
+            'hillshade-highlight-color': '#ffffff',
+            'hillshade-accent-color': '#6f7f86'
+          }
+        },
+        { id: 'carto-labels-layer', type: 'raster', source: 'carto-labels' }
+      ]
+    }
   },
   satelite: {
     id: 'satelite',

@@ -264,7 +264,7 @@ button { color: inherit; }
 .cm-title { top: 12px; left: 50%; transform: translateX(-50%); max-width: calc(100% - 180px); padding: 8px 18px; text-align: center; }
 .cm-title h2 { margin: 0; font-size: 1.05rem; font-weight: 700; line-height: 1.25; }
 .cm-title p { margin: 3px 0 0; font-size: .72rem; color: #4d6273; }
-.cm-north { top: 12px; left: 12px; padding: 4px 6px 2px; line-height: 0; }
+.cm-north { top: 12px; left: 12px; padding: 6px 8px 4px; line-height: 0; }
 .cm-legend { left: 12px; bottom: 12px; max-width: 260px; max-height: 55%; overflow-y: auto; padding: 10px 12px; }
 .cm-legend h4 { margin: 0 0 7px; font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; }
 .cm-legend-section + .cm-legend-section { margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(24, 48, 65, .15); }
@@ -272,7 +272,7 @@ button { color: inherit; }
 .cm-legend-item { display: flex; align-items: center; gap: 7px; font-size: .64rem; color: #33495a; margin-top: 3px; }
 .cm-legend-swatch { width: 13px; height: 13px; border-radius: 2px; flex: 0 0 auto; border: 1px solid rgba(0, 0, 0, .15); }
 .cm-legend-swatch.line { height: 4px; border-radius: 3px; }
-.cm-credits { right: 12px; bottom: 64px; padding: 4px 8px; font-size: .6rem; color: #4d6273; }
+.cm-credits { left: 50%; bottom: 38px; transform: translateX(-50%); padding: 4px 10px; font-size: .62rem; color: #4d6273; white-space: nowrap; }
 .cm-export-btn {
   position: absolute;
   z-index: 6;
@@ -311,10 +311,18 @@ button { color: inherit; }
 }
 .metodologia-header { display: flex; align-items: center; gap: 16px; padding-bottom: 20px; margin-bottom: 8px; border-bottom: 1px solid var(--border-color); }
 .metodologia-header img { width: 72px; height: 72px; object-fit: contain; }
-.metodologia-header h1 { margin: 0; font-size: 1.5rem; }
+.metodologia-header h1 { margin: 0; font-size: 1.5rem; line-height: 1.25; }
 .metodologia-header p { margin: 2px 0 0; color: var(--text-muted); font-size: .85rem; }
 .metodologia-section h2 { margin: 26px 0 8px; font-size: 1.05rem; color: var(--primary); }
-.metodologia-section p { margin: 0 0 10px; font-size: .9rem; }
+.metodologia-section p { margin: 0 0 10px; font-size: .92rem; text-align: justify; hyphens: auto; }
+.metodologia-section > h2 { padding-bottom: 6px; border-bottom: 1px solid var(--border-color); }
+.metodologia-variable { margin: 16px 0 0; padding: 2px 0 2px 14px; border-left: 3px solid var(--accent); }
+.metodologia-variable h3 { margin: 0 0 6px; font-size: .95rem; font-weight: 700; color: var(--accent); }
+.metodologia-variable p { margin: 0; }
+.metodologia-section strong { color: var(--primary); font-weight: 650; }
+.atlas-card { display: flex; flex-direction: column; align-items: center; gap: 6px; margin-top: 10vh; text-align: center; color: var(--text-muted); }
+.atlas-card h1 { margin: 10px 0 0; font-size: 1.5rem; color: var(--text-main); }
+.atlas-card p { margin: 0; font-size: 1rem; }
 .metodologia-footer { margin-top: 32px; padding-top: 20px; border-top: 1px solid var(--border-color); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px; }
 .metodologia-partners { display: flex; flex-wrap: wrap; align-items: center; gap: 20px; }
 .metodologia-partners img { height: 38px; width: auto; object-fit: contain; }
