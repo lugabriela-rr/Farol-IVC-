@@ -1,10 +1,13 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { Moon, Sun } from 'lucide-react';
 import MapComponent from './components/MapComponent';
 import Sidebar from './components/Sidebar';
+import TopBar from './components/TopBar';
+import ConstrutorMapas from './components/ConstrutorMapas/ConstrutorMapas';
+import Metodologia from './components/Metodologia/Metodologia';
 import { layersConfig } from './config/layers';
 
 function App() {
+  const [activeTab, setActiveTab] = useState('analise');
   const [activeLayers, setActiveLayers] = useState([]);
   const [activeBasemap, setActiveBasemap] = useState('urbano');
   const [municipalities, setMunicipalities] = useState([]);
@@ -50,34 +53,40 @@ function App() {
 
   return (
     <div className="app-container">
-      <div className="map-container">
-        <MapComponent
-          activeLayers={activeLayers}
-          activeBasemap={activeBasemap}
-          selectedMunicipality={selectedMunicipality}
-        />
-      </div>
-
-      <Sidebar
-        categories={categories}
-        activeLayers={activeLayers}
-        toggleLayer={toggleLayer}
-        activeBasemap={activeBasemap}
-        setActiveBasemap={setActiveBasemap}
-        municipalities={municipalities}
-        onSelectMunicipality={setSelectedMunicipality}
+      <TopBar
+        activeTab={activeTab}
+        onTabChange={setActiveTab}
+        isDarkMode={isDarkMode}
+        onToggleTheme={() => setIsDarkMode((value) => !value)}
       />
 
-      <div className="app-header">
-        <button
-          className="theme-toggle"
-          onClick={() => setIsDarkMode((value) => !value)}
-          aria-label={isDarkMode ? 'Ativar tema claro' : 'Ativar tema escuro'}
-          title={isDarkMode ? 'Tema claro' : 'Tema escuro'}
-        >
-          {isDarkMode ? <Sun size={17} strokeWidth={1.8} /> : <Moon size={17} strokeWidth={1.8} />}
-        </button>
-      </div>
+      <main className="app-main">
+        {activeTab === 'analise' && (
+          <>
+            <div className="map-container">
+              <MapComponent
+                activeLayers={activeLayers}
+                activeBasemap={activeBasemap}
+                selectedMunicipality={selectedMunicipality}
+              />
+            </div>
+
+            <Sidebar
+              categories={categories}
+              activeLayers={activeLayers}
+              toggleLayer={toggleLayer}
+              activeBasemap={activeBasemap}
+              setActiveBasemap={setActiveBasemap}
+              municipalities={municipalities}
+              onSelectMunicipality={setSelectedMunicipality}
+            />
+          </>
+        )}
+
+        {activeTab === 'construtor' && <ConstrutorMapas municipalities={municipalities} />}
+
+        {activeTab === 'metodologia' && <Metodologia />}
+      </main>
     </div>
   );
 }
